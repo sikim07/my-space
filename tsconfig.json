@@ -1,0 +1,5 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx" // React 17 이상에서 필요한 설정
+    }
+}
