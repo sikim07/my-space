@@ -1,8 +1,8 @@
-import Layout from "../components/Layout"
+import Layout from "../layouts/Layout"
 
 const Blog = (): JSX.Element => {
 	return (
-		<Layout isPending={false}>
+		<Layout>
 			<div>Blog</div>
 		</Layout>
 	)

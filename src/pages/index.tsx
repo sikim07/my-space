@@ -1,16 +1,16 @@
-import Layout from "../components/Layout";
+import Layout from "../layouts/Layout"
 
-const Index = (navigate): JSX.Element => {
-    return (
-        <Layout isPending={false}>
-            <div>
-                Index
-                <div>
-                    <a href={`/blog`}>blog</a>
-                </div>
-            </div>
-        </Layout>
-    );
-};
+const Index = (): JSX.Element => {
+	return (
+		<Layout>
+			<div className="bg-white">
+				Index
+				<div>
+					<a href={`/blog`}>blog</a>
+				</div>
+			</div>
+		</Layout>
+	)
+}
 
-export default Index;
+export default Index
