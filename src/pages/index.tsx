@@ -1,4 +1,5 @@
 import Layout from "@/layouts/Layout"
+import { Link } from "react-router-dom"
 
 const Index = (): JSX.Element => {
 	return (
@@ -6,7 +7,7 @@ const Index = (): JSX.Element => {
 			<div>
 				Index
 				<div>
-					<a href={`/blog`}>blog</a>
+					<Link to={`/blog`}>blog</Link>
 				</div>
 			</div>
 		</Layout>
