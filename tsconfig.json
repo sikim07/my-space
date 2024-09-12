@@ -1,5 +1,9 @@
 {
 	"compilerOptions": {
-		"jsx": "react-jsx" // React 17 이상에서 필요한 설정
+		"jsx": "react-jsx", // React 17 이상에서 필요한 설정
+		"baseUrl": "./", // 프로젝트의 루트 디렉토리를 기준으로 설정
+		"paths": {
+			"@/*": ["src/*"] // '@'를 'src'로 매핑
+		}
 	}
 }
