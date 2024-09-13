@@ -1,7 +1,9 @@
 import Layout from "@/layouts/Layout"
 import { Blog } from "@/types/blog"
+import { BlogList, BlogItem } from "@/components/blog/BlogList"
+import Category from "@/components/blog/Category"
 
-const BlogList = (): JSX.Element => {
+const BlogListPage = (): JSX.Element => {
 	const list: Blog[] = [
 		{
 			id: 1,
@@ -22,14 +24,14 @@ const BlogList = (): JSX.Element => {
 	]
 	return (
 		<Layout>
-			<section>categories</section>
-			<section>
-				{list.map((i) => (
-					<div>adsf</div>
-				))}
-			</section>
+			<Category />
+			<BlogList>
+				<BlogItem />
+				<BlogItem />
+				<BlogItem />
+			</BlogList>
 		</Layout>
 	)
 }
 
-export default BlogList
+export default BlogListPage

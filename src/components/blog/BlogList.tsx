@@ -1,5 +1,11 @@
-const BlogList = (): JSX.Element => {
-	return <div>BlogList</div>
+import { ReactNode } from "react"
+
+const BlogList = ({ children }: ReactNode): JSX.Element => {
+	return <section>BlogList</section>
 }
 
-export default BlogList
+const BlogItem = (): JSX.Element => {
+	return <article>adsfsdaf</article>
+}
+
+export { BlogList, BlogItem }
