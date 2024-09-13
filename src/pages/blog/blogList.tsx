@@ -8,7 +8,7 @@ const BlogListPage = (): JSX.Element => {
 		{
 			id: 1,
 			title: "블로그 제목 1",
-			description: "블로그 내용1",
+			content: "블로그 내용1",
 			date: "2024-04-07",
 			img: null,
 			imgAlt: null,
@@ -16,7 +16,7 @@ const BlogListPage = (): JSX.Element => {
 		{
 			id: 2,
 			title: "블로그 제목 2",
-			description: "블로그 내용2",
+			content: "블로그 내용2",
 			date: "2024-04-08",
 			img: null,
 			imgAlt: null,
@@ -26,9 +26,17 @@ const BlogListPage = (): JSX.Element => {
 		<Layout>
 			<Category />
 			<BlogList>
-				<BlogItem />
-				<BlogItem />
-				<BlogItem />
+				{list.map((i) => (
+					<BlogItem
+						key={i.id}
+						id={i.id}
+						title={i.title}
+						content={i.content}
+						date={i.date}
+						img={i.img}
+						imgAlt={i.imgAlt}
+					/>
+				))}
 			</BlogList>
 		</Layout>
 	)
