@@ -4,7 +4,7 @@ import { Blog } from "@/types/blog"
 
 const BlogList = ({ children }: ReactNode): JSX.Element => {
 	return (
-		<section className="w-[940px] xd:w-full xd:px-[24px] pt-[50px] flex flex-col gap-[20px]">
+		<section className="mx-auto w-[940px] xd:w-full xd:px-[40px] pt-[50px] flex flex-col gap-[20px]">
 			{children}
 		</section>
 	)
@@ -21,9 +21,12 @@ const BlogItem = (item: Blog): JSX.Element => {
 					<p className="tracking-[-0.04em] text-[16px] text-[#d3d3d3] pt-[8px] line-clamp-1">
 						{item.content}
 					</p>
-					<p className="leading-[58px] tracking-[-0.04em] text-[16px] text-[#d3d3d3]">
+					<time
+						className="leading-[58px] tracking-[-0.04em] text-[16px] text-[#d3d3d3]"
+						dateTime={`${item.date}`}
+					>
 						{item.date}
-					</p>
+					</time>
 				</Link>
 			</div>
 			<div className="">

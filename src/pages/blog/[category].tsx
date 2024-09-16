@@ -7,6 +7,7 @@ const BlogListPage = (): JSX.Element => {
 	const list: Blog[] = [
 		{
 			id: 1,
+			category: "Javascript",
 			title: "블로그 제목 1",
 			content: "블로그 내용1",
 			date: "2024-04-07",
@@ -15,6 +16,7 @@ const BlogListPage = (): JSX.Element => {
 		},
 		{
 			id: 2,
+			category: "React",
 			title: "블로그 제목 2",
 			content: "블로그 내용2",
 			date: "2024-04-08",
@@ -30,6 +32,7 @@ const BlogListPage = (): JSX.Element => {
 					<BlogItem
 						key={i.id}
 						id={i.id}
+						category={i.category}
 						title={i.title}
 						content={i.content}
 						date={i.date}
