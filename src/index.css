@@ -44,6 +44,10 @@ button {
 	background-color: #1a1a1a;
 	cursor: pointer;
 	transition: border-color 0.25s;
+	border: none;
+	outline: none;
+	background-color: inherit;
+	cursor: pointer;
 }
 button:hover {
 	border-color: #646cff;

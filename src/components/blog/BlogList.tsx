@@ -4,7 +4,7 @@ import { Blog } from "@/types/blog"
 
 const BlogList = ({ children }: ReactNode): JSX.Element => {
 	return (
-		<section className="mx-auto w-[940px] xd:w-full xd:px-[40px] pt-[50px] flex flex-col gap-[20px]">
+		<section className="xm:mx-auto xm:w-full w-[60%] xm:px-[40px] flex flex-col gap-[20px]">
 			{children}
 		</section>
 	)

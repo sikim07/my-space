@@ -2,6 +2,7 @@ import Layout from "@/layouts/Layout"
 import { Blog } from "@/types/blog"
 import { BlogList, BlogItem } from "@/components/blog/BlogList"
 import Category from "@/components/blog/Category"
+import LayoutBlog from "@/layouts/LayoutBlog"
 
 const BlogListPage = (): JSX.Element => {
 	const list: Blog[] = [
@@ -25,7 +26,7 @@ const BlogListPage = (): JSX.Element => {
 		},
 	]
 	return (
-		<Layout>
+		<LayoutBlog>
 			<Category />
 			<BlogList>
 				{list.map((i) => (
@@ -41,7 +42,7 @@ const BlogListPage = (): JSX.Element => {
 					/>
 				))}
 			</BlogList>
-		</Layout>
+		</LayoutBlog>
 	)
 }
 

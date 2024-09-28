@@ -36,7 +36,7 @@ const Category = (): JSX.Element => {
 	return (
 		<section
 			className={classNames(
-				"mx-auto w-[940px] xd:w-full flex gap-[20px] border-b border-solid border-[#d3d3d3]",
+				"w-[30%] flex flex-col xm:w-full xm:flex-row",
 			)}
 		>
 			{CATEGORIES.map((i) => (
