@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom"
 const CATEGORIES = [
 	{
 		id: 1,
-		name: "Javscript",
+		name: "Javascript",
 	},
 	{
 		id: 2,
@@ -24,15 +24,11 @@ const CATEGORIES = [
 	},
 ]
 
-const Category = (): JSX.Element => {
-	const location = useLocation()
-
-	const isPageOf = (category) => {
-		return location.pathname
-			.split("/")
-			.some((e) => e === category.name.toLowerCase())
-	}
-
+const Category = ({
+	selectedCategory,
+}: {
+	selectedCategory?: string
+}): JSX.Element => {
 	return (
 		<section
 			className={classNames(
@@ -43,11 +39,16 @@ const Category = (): JSX.Element => {
 				<Link
 					to={`/blog/${i.name.toLowerCase()}`}
 					key={`blog_category_${i.id}`}
-					className={classNames(
-						isPageOf(i) ? "border-b border-solid border-[2px]" : "",
-					)}
 				>
-					<button className="bg-transparent">{i.name}</button>
+					<button
+						className={
+							i.name.toLowerCase() === selectedCategory
+								? "font-bold"
+								: ""
+						}
+					>
+						{i.name}
+					</button>
 				</Link>
 			))}
 		</section>

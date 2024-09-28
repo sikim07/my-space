@@ -3,8 +3,11 @@ import { Blog } from "@/types/blog"
 import { BlogList, BlogItem } from "@/components/blog/BlogList"
 import Category from "@/components/blog/Category"
 import LayoutBlog from "@/layouts/LayoutBlog"
+import { useParams } from "react-router-dom"
 
 const BlogListPage = (): JSX.Element => {
+	const category = useParams<{ category: string }>().category
+
 	const list: Blog[] = [
 		{
 			id: 1,
@@ -25,9 +28,10 @@ const BlogListPage = (): JSX.Element => {
 			imgAlt: null,
 		},
 	]
+
 	return (
 		<LayoutBlog>
-			<Category />
+			<Category selectedCategory={category} />
 			<BlogList>
 				{list.map((i) => (
 					<BlogItem
